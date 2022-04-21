@@ -73,10 +73,10 @@ A C#/.NET API that allows other developers to interact with data about the cats 
 
 ### Run the project
 - Run the program with the command `$ dotnet run`
-- Open the project by navigating your browser to http://localhost:5000/api/Animals (http://localhost:5000/api/Animals) or https://localhost:5001/api/Animals (https://localhost:5001/api/Animals).
+- Open the project by navigating your browser to http://localhost:5000/api/Animals or https://localhost:5001/api/Animals.
 
 ### Explore the API Endpoints and Schema with Swagger
-- Once you've run the program in the console (see above), explore and test the API endpoints and schema with Swagger by navigating to http://localhost:5000/index.html (http://localhost:5000/index.html).
+- Once you've run the program in the console (see above), explore and test the API endpoints and schema with Swagger by navigating to http://localhost:5000/index.html.
 
 ## Known Bugs <a id="bugs"></a>
 
