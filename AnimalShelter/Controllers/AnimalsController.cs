@@ -20,6 +20,29 @@ namespace AnimalShelter.Controllers
       _db = db;
     }
 
+    /// <summary>
+    /// Gets all animals or animals based off search query
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="species"></param>
+    /// <param name="minimumAge"></param>
+    /// <param name="gender"></param>
+    /// <returns>List of animals</returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     GET/api/Animals
+    ///     {
+    ///       "AnimalId": "1",
+    ///       "Name": "Rose",
+    ///       "Species": "Cat",
+    ///       "Age": "2",
+    ///       "Gender": "Female",
+    ///     }
+    /// </remarks>
+    /// <response code="200">Returns an array of entries. If no entries returns an empty array</response>
+    /// <response code="400">Returns Not Found</response>
+
     // GET api/animals
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string gender, string name, int minimumAge)
@@ -49,6 +72,25 @@ namespace AnimalShelter.Controllers
       return await query.ToListAsync();
     }
 
+    /// <summary>
+    /// Gets specific animal based off id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>Animal object that matches id</returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     GET/api/Animals{id}
+    ///     {
+    ///       "AnimalId": "1",
+    ///       "Name": "Rose",
+    ///       "Species": "Cat",
+    ///       "Age": "2",
+    ///       "Gender": "Female",
+    ///     }
+    /// </remarks>
+    /// <response code="200">Returns Ok (Success)</response>
+    /// <response code="404">Returns Not Found</response>
 
     // GET: api/Animals/5
     [HttpGet("{id}")]
@@ -64,6 +106,26 @@ namespace AnimalShelter.Controllers
       return animal;
     }
 
+    /// <summary>
+    /// Edits properties of entries in database
+    /// </summary>
+    ///<param name="id"></param>
+    /// <param name="animal"></param>
+    /// <returns>Status code 204: successful </returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     PUT/api/Animals{id}
+    ///     {
+    ///       "AnimalId": "1",
+    ///       "Name": "Rose",
+    ///       "Species": "Cat",
+    ///       "Age": "2",
+    ///       "Gender": "Female",
+    ///     }
+    /// </remarks>
+    /// <response code="204">Successfully posted animal</response>
+    /// <response code="404">Returns Not Found</response>
 
     // PUT: api/Animals/5
     [HttpPut("{id}")]
@@ -95,6 +157,25 @@ namespace AnimalShelter.Controllers
       return NoContent();
     }
 
+    /// <summary>
+    /// Posts a new animal
+    /// </summary>
+    /// <param name="animal"></param>
+    /// <returns>Status code 204: successful </returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     POST/api/Animals
+    ///     {
+    ///       "AnimalId": "1",
+    ///       "Name": "Rose",
+    ///       "Species": "Cat",
+    ///       "Age": "2",
+    ///       "Gender": "Female",
+    ///     }
+    /// </remarks>
+    /// <response code="204">Successfully posted animal</response>
+    /// <response code="404">Returns Not Found</response>
 
     // POST api/animals
     [HttpPost]
@@ -106,6 +187,12 @@ namespace AnimalShelter.Controllers
       return CreatedAtAction(nameof(GetAnimal), new { id = animal.AnimalId }, animal);
     }
 
+    /// <summary>
+    /// Deletes animal entry
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>Status code 204: successful </returns>
+    /// <response code="404">Returns Not Found</response>
 
     // DELETE: api/Animals/5
     [HttpDelete("{id}")]
