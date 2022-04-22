@@ -1,4 +1,4 @@
-# <p align="center"> **Animal Shelter API** </p>
+# <p align="center"> 🐈  &nbsp; **Animal Shelter API** &nbsp; 🐕 </p>
 
 #### _A queryable C#/ASP.NET Core API using RESTful principles and Swagger to sort and document animal shelter data._
 
