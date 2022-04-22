@@ -1,10 +1,8 @@
-# <p align="center"> 🐈 **Animal Shelter API** 🐕 </p>
+# <p align="center"> **Animal Shelter API** </p>
 
-#### _An API for a local animal shelter. The API will list the available cats and dogs at the shelter._
+#### _A queryable C#/ASP.NET Core API using RESTful principles and Swagger to sort and document animal shelter data._
 
 #### by **John Whitten** ~ April 21, 2022
-
-![Cover](./img/img_01.png)
 
 ## Table of Contents
 
@@ -77,6 +75,8 @@ A C#/.NET API that allows other developers to interact with data about the cats 
 
 ### Explore the API Endpoints and Schema with Swagger
 - Once you've run the program in the console (see above), explore and test the API endpoints and schema with Swagger by navigating to http://localhost:5000/index.html.
+
+![Cover](./img/img_01.png)
 
 ## Known Bugs <a id="bugs"></a>
 
